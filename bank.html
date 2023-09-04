@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <section>
+        <div class="">
+            <h1 class="text-center text-4xl font-bold text-sky-950 mb-6">Let's See My <span
+                    class="text-5xl font-bold text-violet-700">Bank Balance</span></h1>
+            <div class="w-3/4 mx-auto grid grid-cols-1 lg:grid-cols-3 gap-5">
+                <div class="text-white bg-green-500 p-8 rounded-xl">
+                    <h4 class="text-2xl">Total Deposite</h4>
+                    <h2 class="text-5xl">$<span id="deposite">00</span></h2>
+                </div>
+                <div class="text-white bg-yellow-500 p-8 rounded-xl">
+                    <h4 class="text-2xl">Total Withdraw</h4>
+                    <h2 class="text-5xl">$<span id="Withdraw">00</span></h2>
+                </div>
+                <div class="text-white bg-violet-500 p-8 rounded-xl row-span-2 text-center">
+                    <h4 class="text-3xl mt-7 mb-3">Current Balance</h4>
+                    <h2 class="text-5xl mb-14">$<span id="Total-Balance">00</span></h2>
+                    <h4 class="text-xl">Logout Safely please</h4>
+                    <button id="logout-btn" class="mt-3 bg-pink-500 px-5 py-1 rounded-3xl">Logout</button>
+
+                </div>
+                <div class="text-white bg-cyan-600 p-8 rounded-xl">
+                    <h4 class="text-3xl">Last Deposite</h4>
+                    <h2 class="text-5xl">$<span id="Last-Deposite">00</span></h2>
+                </div>
+                <div class="text-white bg-teal-500 p-8 rounded-xl">
+                    <h4 class="text-3xl">Last Withdraw</h4>
+                    <h2 class="text-5xl">$<span id="Last-Withdraw">00</span></h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ------------withdraw and deposite section-------------- -->
+    <section>
+        <div class="w-3/4 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-5 mt-7">
+            <div class="text-white bg-sky-500 p-8 rounded-xl">
+                <h4 class="text-3xl">Please Deposite</h4>
+                <input class="text-black w-full lg:w-3/4 px-4 py-1 rounded-xl mt-7" type="number" name="" id="deposite-field"
+                    placeholder="$ Amount you want deposite">
+                <br>
+                <button id="deposite-btn" class="mt-3 bg-purple-500 px-5 py-1 rounded-3xl">Deposite</button>
+            </div>
+            <div class="text-white bg-blue-400 p-8 rounded-xl">
+                <h4 class="text-3xl">Please Withdraw</h4>
+                <input class="text-black w-full lg:w-3/4 px-4 py-1 rounded-xl mt-7" type="number" name="" id="Withdraw-field"
+                    placeholder="$ Amount you want Withdraw">
+                <br>
+                <button id="Withdraw-btn" class="mt-3 bg-purple-500 px-5 py-1 rounded-3xl">Withdraw</button>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="banktk.js"></script>
+</body>
+
+</html>

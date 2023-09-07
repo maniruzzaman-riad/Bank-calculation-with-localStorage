@@ -1,25 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baap Er Bank</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.3/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
     <section>
         <div class="w-3/4 mx-auto text-center bg-teal-400 p-8">
             <h2 class="font-medium text-4xl">Wellcome to Baap Er Bank</h2>
-            <input class="mt-7 w-full lg:w-3/4 px-5 py-1" type="email" name="" id="email-fild" placeholder="Enter your Email">
+            <input class="mt-7 w-full lg:w-3/4 px-5 py-1" type="email" name="" id="email-fild"
+                placeholder="Enter your Email">
             <br>
-            <input class="mt-3 w-full lg:w-3/4 px-5 py-1" type="password" name="" id="password-fild" placeholder="Use must 6 digit password">
+            <input class="mt-3 w-full lg:w-3/4 px-5 py-1" type="password" name="" id="password-fild"
+                placeholder="Use must 6 digit password">
             <br>
             <button class="mt-3 bg-purple-500 px-5 py-1 rounded-3xl" id="login-btn">Log in</button>
+
+            <div class="mt-7">
+                <p>If you have no Account,Please,,click "<span class="text-black font-bold">Sign up</span>" button to
+                    create a new Account</p>
+                <button onclick="my_modal_5.showModal()" class="bg-purple-700 px-3 py-1 rounded-lg text-white mt-4">Sign up</button>
+            </div>
         </div>
+        <!-- ------------------------------This is modal------------------ -->
+        <!-- Open the modal using ID.showModal() method -->
+        
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+                <h3 class="font-medium text-lg">Fill the form</h3>
+                <input class="border-2 border-gray-400 px-3 py-1 w-3/4" type="text" name="" id="name-field" placeholder="Type your name">
+
+                <input class="border-2 border-gray-400 px-3 py-1 w-3/4 my-3" type="email" name="" id="email-field-create" placeholder="Type your Email">
+
+                <input class="border-2 border-gray-400 px-3 py-1 w-3/4" type="password" name="" id="password-fild-create" placeholder="Type a strong password">
+                <div class="modal-action">
+
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button onclick="signUp()" id="submite-button" class="btn">Submite</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+
+
     </section>
-    
+
 
 
     <script src="main.js"></script>
 </body>
+
 </html>
